@@ -1,0 +1,117 @@
+/* Animal Name Generator Specific Styles */
+
+.animal-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.animal-emoji {
+    font-size: 6rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.animal-emoji.animating {
+    animation: shake 0.15s ease-in-out;
+}
+
+.animal-emoji.revealed {
+    animation: bounce 0.5s ease-out;
+}
+
+.animal-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    min-height: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* History item enhancements */
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-emoji {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.item-number {
+    font-weight: bold;
+    color: #667eea;
+    min-width: 1.5rem;
+    flex-shrink: 0;
+}
+
+.item-value {
+    font-size: 1.1rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    25% {
+        transform: translateX(-5px) scale(1.05);
+    }
+    75% {
+        transform: translateX(5px) scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button state */
+.action-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animal-emoji {
+        font-size: 4rem;
+    }
+    
+    .animal-name {
+        font-size: 1.5rem;
+    }
+    
+    .item-emoji {
+        font-size: 1.2rem;
+    }
+}

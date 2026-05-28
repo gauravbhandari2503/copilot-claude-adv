@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Picker - Vanilla Apps</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="colorPicker.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="../../index.html" class="nav-link">← Home</a>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <h1>🎨 Random Color Picker</h1>
+        
+        <!-- Color Display -->
+        <div class="color-display" id="colorDisplay">
+            <div class="color-box" id="colorBox"></div>
+        </div>
+        
+        <!-- Color Info -->
+        <div class="color-info">
+            <div class="color-code" id="colorCode">#000000</div>
+            <button id="copyButton" class="copy-button">📋 Copy Code</button>
+        </div>
+        
+        <!-- Generate Button -->
+        <button id="generateButton" class="generate-button">Generate Random Color</button>
+        
+        <!-- Color History Section -->
+        <div class="color-history-section">
+            <h2>Color History</h2>
+            <div id="colorHistory" class="color-history-list">
+                <p class="empty-message">No colors generated yet. Click the button to start!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="colorPicker.js"></script>
+</body>
+</html>

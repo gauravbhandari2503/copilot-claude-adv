@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Name Generator - Vanilla Apps</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="animalName.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="../../index.html" class="nav-link">← Home</a>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <h1>🦁 Animal Name Generator</h1>
+        
+        <!-- Main Display Area -->
+        <div class="display-area" id="display">
+            <div class="animal-display">
+                <span class="animal-emoji" id="animalEmoji">🐾</span>
+                <span class="animal-name" id="animalName">Click to generate!</span>
+            </div>
+        </div>
+        
+        <!-- Main Action Button -->
+        <button id="generateButton" class="action-button">
+            Generate Animal
+        </button>
+        
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2>Statistics</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total Generated:</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Unique Animals:</span>
+                    <span class="stat-value" id="uniqueCount">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- History Section -->
+        <div class="history-section">
+            <h2>Recent Animals</h2>
+            <div id="history" class="history-list">
+                <p class="empty-message">No animals generated yet.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="animalName.js"></script>
+</body>
+</html>
