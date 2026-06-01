@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Dice - Vanilla Apps</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="twoDice.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="../../index.html" class="nav-link">← Home</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>🎲 Two Dice Roller</h1>
+
+        <!-- Dice Display -->
+        <div class="dice-container">
+            <div class="dice" id="dice1">
+                <div class="dice-number">?</div>
+            </div>
+            <div class="dice-plus">+</div>
+            <div class="dice" id="dice2">
+                <div class="dice-number">?</div>
+            </div>
+        </div>
+
+        <!-- Total Display -->
+        <div class="total-display" id="totalDisplay">
+            <span class="total-label">Total</span>
+            <span class="total-value" id="totalValue">—</span>
+        </div>
+
+        <!-- Roll Button -->
+        <button id="rollButton" class="roll-button">Roll Dice</button>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2>Statistics</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total Rolls:</span>
+                    <span class="stat-value" id="totalRolls">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Average:</span>
+                    <span class="stat-value" id="average">—</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Highest:</span>
+                    <span class="stat-value" id="highest">—</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Lowest:</span>
+                    <span class="stat-value" id="lowest">—</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <h2>Roll History</h2>
+            <div id="history" class="history-list">
+                <p class="empty-message">No rolls yet. Click the button to start!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="twoDice.js"></script>
+</body>
+</html>
