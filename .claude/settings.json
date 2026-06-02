@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' 2>/dev/null | grep -qE '(CLAUDE\\.md|\\.claude/commands/.*\\.md|\\.claude/settings\\.json)$' && echo '[token-optimizer] Review new CLAUDE.md/commands files for deduplication' || true",
+            "statusMessage": "Token optimization check"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Generator - Vanilla Apps</title>
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="drinkGenerator.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="../../index.html" class="nav-link">← Home</a>
+    </nav>
+
+    <div class="container">
+        <h1>🍹 Drink Generator</h1>
+        <div class="display-area" id="display">Click the button to generate a drink</div>
+        <button id="generateButton" class="action-button">Generate Drink</button>
+
+        <div class="stats-section">
+            <h2>Statistics</h2>
+            <div class="stat-item">
+                <span class="stat-label">Total Generated:</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>History</h2>
+            <div id="history" class="history-list">
+                <p class="empty-message">No drinks generated yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="drinkGenerator.js"></script>
+</body>
+</html>
